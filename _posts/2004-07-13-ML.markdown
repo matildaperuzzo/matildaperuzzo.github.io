@@ -13,7 +13,7 @@ description1: </p>
         <p style="min-height:20px"></p>
         <h3>State</h3> 
         <p style="min-height:10px"></p>
-        <p> In reinforcement learning, the state serves as the foundation for decision-making, providing the agent with crucial information about the environment. The state representation determines what aspects of the environment are observable to the agent and influences its ability to perceive, learn, and generalize across different situations. A well-designed state representation should capture relevant features of the environment while minimizing dimensionality and computational complexity. For my algorithm I studied 4 different states.
+        <p> In reinforcement learning, the state serves as the foundation for decision-making, providing the agent with information about the environment. The state representation determines what aspects of the environment are observable to the agent and influences its ability to perceive, learn, and generalize across different situations. A well-designed state representation should capture relevant features of the environment while minimizing dimensionality and computational complexity. For my algorithm I studied 4 different states.
         <p style="min-height:10px"></p>
         </p>
             <ol>
