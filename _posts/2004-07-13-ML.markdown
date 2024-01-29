@@ -7,19 +7,25 @@ alt: Machine Learning
 title1: Reinforcement Learning with Tetris
 description1: </p>
         <div class="cv-section">
-        <p>Fraser plays Tetris is a reinforcement learning project based on python libraries PyGame and PyTorch. The algorithm is based on a project by patrickloeber on GitHub which revolved around the classic game Snake. I modified the code to work for Tetris, here are some of my findings.</p>
-        <p><a href="https://github.com/patrickloeber/python-fun" target="_blank">Source Python repository.</a></p>
-        <p style="min-height:50px"></p>
+        <p>Fraser plays Tetris is a reinforcement learning project based on python libraries PyGame and PyTorch. The algorithm is based on a project by <a href="https://github.com/patrickloeber/python-fun" target="_blank">patrickloeber</a> on GitHub which revolved around the classic game Snake. I modified the code to work for Tetris, here are some of my findings.</p>
+        <p>Find my code <a href="https://github.com/matildaperuzzo/fraser-plays-tetris" target="_blank">here.</a></p>
+
+        <p style="min-height:20px"></p>
         <h3>State</h3> 
         <p style="min-height:10px"></p>
-        <p>Probably one of the most important choices in a reinforcement learning project is to choose the state. I tested several input states with different dimentions
+        <p> In reinforcement learning, the state serves as the foundation for decision-making, providing the agent with crucial information about the environment. The state representation determines what aspects of the environment are observable to the agent and influences its ability to perceive, learn, and generalize across different situations. A well-designed state representation should capture relevant features of the environment while minimizing dimensionality and computational complexity. For my algorithm I studied 4 different states.
+        <p style="min-height:10px"></p>
         </p>
-        <ol>
-                <li>Full information - my first approach was to give the algorithm as much information as possible. For this I imputed values for each square on the board as a binary that indicated whether the square was occupied or not. I also imputed the position of the block that falling Tetris block. This approach did not achieve high scores, likely due to a small model or small training times. It also doesn’t scale well as the size of the board is increased.</li>
-                <li>Plane information - in order to simplify the input state, I decided to provide information about the highest plane in the placed blocks and the lowest plane in the controlled block. The aim is for the algorithm to recognize complementary patters between the two to figure out good fits. The approach scales linearly with the x dimension of the board.</li>
-                <li>Local information - for this approach, the distance between each point in the shape to the bottom floor is calculated, then the number of points with the same distance is passed on to the state along-side the shortest distance. The two values are calculated for each possible move. This approach was so far the most successful, reaching an average of 2 cleared rows per game with a record of 14 rows. The limitation is that the agent only has knowledge of the local space and cannot plan more than one move ahead. The method however is independent of board size.</li>
-                <li>Minimal information - this approach is a minimization on the previous method. It performs the same calculations, but the state consist of 4 values, one for each possible action. The values indicate the difference in the number of points with the same distance between the current state and the new state from a possible action.</li>
-        </ol>
+            <ol>
+                <li><strong>Full Information State Representation:</strong> In the full information approach, the state representation includes a binary grid indicating the occupancy of each cell on the Tetris board. It also includes information about the position, shape, and orientation of the falling Tetris block. This representation provides complete information about the current game state but may suffer from high dimensionality and scalability issues.</li>
+                <p style="min-height:10px"></p>
+                <li><strong>Plane Information State Representation:</strong> The plane information approach simplifies the state representation by providing information about the highest occupied plane in the placed blocks and the lowest occupied plane in the falling Tetris block. This representation aims to capture complementary patterns between the two planes to facilitate decision-making. It scales linearly with the width of the Tetris board.</li>
+                <p style="min-height:10px"></p>
+                <li><strong>Local Information State Representation:</strong> In the local information approach, the state representation focuses on the distance between each point in the falling Tetris block and the bottom floor of the board. It includes the number of points with the same distance and the shortest distance for each possible move. This representation allows the agent to have knowledge of the local space but limits its ability to plan multiple moves ahead. It is independent of the board size.</li>
+                <p style="min-height:10px"></p>
+                <li><strong>Minimal Information State Representation:</strong> The minimal information approach is a simplification of the local information method. It calculates the difference in the number of points with the same distance between the current state and the new state resulting from each possible action. The state consists of four values, one for each possible action, indicating the change in the number of points with the same distance. This representation aims to capture the immediate impact of each action on the local space.</li>
+                </ol>
+
         <img src="img/portfolio/TetrisState.png" class="img-post" alt="{{ post.alt }}">
         <p style="min-height:50px"></p>
 
@@ -27,11 +33,17 @@ description1: </p>
         <p style="min-height:10px"></p>
         <p>The different states were evaluated by looking at the average score after the learning process has concluded. The average score is affected by model parameters, for example
         </p>
+        <p style="min-height:10px"></p>
          <ul>
-                <li>Learning rate - this is a metric that represents the size of steps the algorithm takes when exploring the space. A small learning rate risks getting stuck in local minima, a large one risks being unstable.</li>
-                <li>gamma - this value is specific to reinforcement learning and indicates how much the model prioritises long term strategy. It must be between 0 and 1 and closer to 1 the more long-term strategy is prioritized. In the case of Tetris long term strategy is favourable but the average score peaked for gamma of 0.9.</li>
-                <li>exploration vs exploitation - when first training an algorithm it is important for it to explore the state space randomly (exploration), this is to avoid it getting stuck in local minima. As the algorithm learns the model becomes more reliable to use and can be called to make more decisions (exploitation). Results showed that increasing the exploration step was beneficial to increasing the final score.</li>
+                <li><strong>Learning Rate (Alpha):</strong> The learning rate, denoted as alpha, is a hyperparameter that controls the magnitude of updates to the model's parameters during training. It determines the size of the steps the algorithm takes when exploring the parameter space. A small learning rate may cause slow convergence and risk getting trapped in local minima, while a large learning rate may lead to unstable training and overshooting the optimal solution.</li>
+                <p style="min-height:10px"></p>
+                <li><strong>Discount Factor (Gamma):</strong> The discount factor, denoted as gamma, is specific to reinforcement learning and influences the model's prioritization of long-term rewards versus immediate rewards. Gamma values range between 0 and 1, with higher values indicating a greater emphasis on long-term strategy.</li>
+                <p style="min-height:10px"></p>
+                <li><strong>Exploration vs. Exploitation:</strong> During the initial stages of training, the algorithm employs exploration to randomly explore the state space and avoid local minima. Exploration allows the algorithm to discover diverse strategies and learn more about the environment. As the algorithm learns, it transitions towards exploitation, where it leverages the learned knowledge to make more informed decisions and exploit the most promising actions. Increasing the exploration step early in training can facilitate discovering optimal strategies and prevent premature convergence to suboptimal solutions.</li>
+                <p style="min-height:10px"></p>
         </ul>
+        <p>In the plot below the optimization process is shown for state number 3 (Local Information State Representation) converging into a learning rate of 0.001 and a discount factor of 0.9. With these values the model reached an average of 2.0 points per game and a record of 14 points.
+        </p>
         <img src="img/portfolio/gamma_lr_plot.png" class="img-post" alt="{{ post.alt }}" width=400 height=auto>
         <p style="min-height:50px"></p>
         </div>

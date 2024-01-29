@@ -6387,6 +6387,14 @@ readers do not read off random characters that represent icons */
   src: url("../webfonts/Montserrat-Bold.ttf");
 }
 
+@font-face {
+  font-family: "MontserratBlack";
+  font-style: normal;
+  font-weight: bold;
+  font-display: block;
+  src: url("../webfonts/Montserrat-Black.ttf");
+}
+
 .montserrat-mont {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
