@@ -1,0 +1,64 @@
+---
+layout: default
+modal-id: 4
+img: CV.png
+alt: CV
+project-date: April 2014
+category: CV
+
+title1: Curriculum Vitae
+image1: hamiltonian.png
+description1: </p>
+    <div class="cv-container">
+        <div class="cv-section">
+            <p style="min-height:10px"></p>
+            <h3>Skills</h3>
+            <p><span class="cv-title">Programming:</span> 8 years experience in Python, experience with large collaborative projects, Github repository management, common IDEs (VSCode, Pycharm, Spyder) and UI development. Foundational knowledge in C# and JavaScript and gaming engines. Eagerness to learn C++ and Unreal.</p>
+            <p><span class="cv-title">Research and Development:</span> including automating and optimizing experiments, hypothesis testing, extracting insights from large datasets.</p>
+            <p><span class="cv-title">Interpersonal skills:</span> troubleshooting problems, presenting complex concepts for variety of audiences, working in interdisciplinary teams, working on several projects simultaneously.</p>
+        </div>
+        <p style="min-height:50px"></p>
+        <div class="cv-section">
+            <h3>Professional Experience</h3>
+            <p style="min-height:10px"></p>
+
+            <div class="cv-subtitle">Sentec Ltd, Cambridge • Associate Physicist, Nov. 2022 - Present</div>
+            <ul>
+                <li>Worked on Python software development projects such as instrument control for experiment optimization, data analysis of large data sets, implementing electrical simulations.</li>
+                <li>Conducted an extensive Data Science study on electrical metering data, demonstrating the ability to identify network issues in a timely manner.</li>
+                <li>Joined several projects outside of my area of expertise demonstrating my ability to immerse myself in new topics and produce results within weeks.</li>
+                <li>Demonstrated initiative and a collaborative spirit by proactively seeking additional responsibilities and offering to help colleagues when my workload permitted.</li>
+            </ul>
+            <p style="min-height:10px"></p>
+            <div class="cv-subtitle">TTP plc, Cambridge • PhD intern, Apr. 2022 – Sept. 2022</div>
+            <ul>
+                <li>Contributed to UI development for a prototype, where I quickly learned C# programming.</li>
+                <li>Automated information extraction of complex data from a human factors study allowing fast statistical analysis and presenting it to stakeholders ahead of schedule.</li>
+                <li>Demonstrated excellent time management skills while working both independently and in a team, balancing up to four simultaneous projects managing several stakeholder relationships.</li>
+            </ul>
+            <p style="min-height:10px"></p>
+            <div class="cv-subtitle">King’s College London, London • Associate Researcher, Jun. 2014 – Aug. 2014 and Jun. 2015-Aug. 2015</div>
+            <ul>
+                <li>Led computational simulation development and contributed to experimental projects involving nanostructured cellulose samples, resulting in impactful publications and the extraction of key parameters.</li>
+                <li>Worked independently and in group projects to produce two research papers.</li>
+            </ul>
+        </div>
+        <p style="min-height:50px"></p>
+
+        <div class="cv-section">
+            <h3>Education</h3>
+            <p style="min-height:10px"></p>
+
+            <div class="cv-subtitle">PhD in Physics • ISTA, Klosterneuburg, Graduation Year 2021</div>
+            <ul>
+                <li>Conducted research focusing on fabricating, modeling and characterizing geometric superinductors for use in superconducting qubits and quantum metrology.</li>
+                <li>Developed and maintained the measurement software, a complex code including UI which automated measurement taking.</li>
+                <li>Designed a script in Julia to automate experimental data fitting, a task made particularly challenging by the complexity of the fitting model
+            <div class="cv-subtitle">MSci in Physics (1st class) • King’s College London, Graduation Year 2015</div>
+                <ul>
+                    <li>Graduated top of my class, receiving several awards such as the Layton Research Award for student showing promise in research.</li>
+                    <li>My Master thesis was aimed at envisioning a simple model for disordered thermoelectric systems and understand its limitations and accuracy through simulations and measurements.</li>
+                </ul>
+        </div>
+    </div>
+--- 

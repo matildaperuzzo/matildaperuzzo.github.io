@@ -1,0 +1,22 @@
+---
+layout: default
+modal-id: 5
+img: Art.png
+alt: Data sciences
+project-date: April 2014
+category: Data Science
+
+title1: Disaster chemistry
+image1: DC.png
+description1: </p>
+        <div class="cv-section">
+        <p>Disaster chemistry is an artistic porject inspired by the nanofabrication processes I was doing in my PhD. In particular I was fascinated by how mistakes in fabrication manifested as very interesting and abstract images. The art in disaster chemistry comes from overlaying and enhancing pictures taken with SEM and optical mictroscopes of samples that for one reason or another didn't qualify as being "useful" in the scientific sense. This project allowed me to process the frustration inherent to the trial and error nature of my work by helping me appreciate the value of mistakes and learning from them.</p>
+        <p><a href="https://www.instagram.com/disaster_chemistry/" target="_blank">For more images visit my instagram.</a></p>
+        </div>
+title2: Sewing
+image2: Clothes.png
+description2: </p>
+        <div class="cv-section">
+        <p>One of my great passions is clothing and fashion. For years I have been designing and bringing to life unique garments for myself and friends. I really enjoy the design process such as choosing patterns and fabrics, and I find the process of cutting and sewing pieces together relaxing. Above you can find some of my creations.</p>
+        </div>
+---

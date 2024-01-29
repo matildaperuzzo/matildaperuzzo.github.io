@@ -1,0 +1,18 @@
+---
+layout: default
+modal-id: 1
+img: PhD.png
+alt: PhD
+project-date: April 2014
+category: PhD
+
+title1: PhD project
+image1: PhDsection.png
+description1: </p>
+        <div class="cv-section">
+        <p>My PhD work was concerned with two fascinating circuit quantum electrodynamics components, the Josephson junction and the geometric superinductor, and the interesting experiments that can be done by combining the two. The Josephson junction has revolutionized the field of superconducting circuits as a non-linear dissipation-less circuit element and is used in almost all superconducting qubit implementations since the 90s. On the other hand, the superinductor is a relatively new circuit element introduced as a key component of the fluxonium qubit in 2009. This is an inductor with characteristic impedance larger than the resistance quantum and self-resonance frequency in the GHz regime. The combination of these two elements can occur in two fundamental ways, in parallel and in series. When connected in parallel the two create the fluxonium qubit, a loop with large inductance and a rich energy spectrum reliant on quantum tunneling. On the other hand placing the two elements in series aids with the measurement of the IV curve of a single Josephson junction in a high impedance environment. In this limit theory predicts that the junction will behave as its dual element the phase-slip junction. While the Josephson junction acts as a non-linear inductor the phase-slip junction has the behavior of a non-linear capacitance and can be used to measure new Josephson junction phenomena, namely Coulomb blockade of Cooper pairs and phase-locked Bloch oscillations. The latter experiment allows for a direct link between frequency and current which is an elusive connection in quantum metrology. My work introduced the geometric superinductor, a superconducting circuit element where the high inductance is due to the geometry rather than the material properties of the superconductor, realized from a highly miniaturized superconducting planar coil. In my thesis these structures are be described and characterized as resonators and qubit inductors and progress towards the measurement of phase-locked Bloch oscillations is presented. </p>
+        <p><a href="https://research-explorer.ista.ac.at/record/9920" target="_blank">Thesis.</a></p>
+
+        </div>
+
+---

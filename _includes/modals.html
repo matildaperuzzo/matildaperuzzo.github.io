@@ -13,11 +13,31 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
-            <h2>{{ post.title }}</h2>
+            {% if post.description1 %}
+            <h2>{{ post.title1 }}</h2>
             <hr class="star-primary">
-            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
-            {% if post.description %}
-            <p>{{ post.description }}</p>
+            {% if post.image1 %}
+            <img src="img/portfolio/{{ post.image1 }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+            {% endif %}
+            <p>{{ post.description1 }}
+            <p style="min-height:100px"></p>
+            </p>
+            {% endif %}
+            {% if post.description2 %}
+            <h2>{{ post.title2 }}</h2>
+            <hr class="star-primary">
+            {% if post.image2 %}
+            <img src="img/portfolio/{{ post.image2 }}" class="img-post" alt="{{ post.alt }}">
+            {% endif %}
+            <p>{{ post.description2 }}</p>
+            <p style="min-height:100px"></p>
+            {% endif %}
+            {% if post.description3 %}
+            <h2>{{ post.title3 }}</h2>
+            <hr class="star-primary">
+            <img src="img/portfolio/{{ post.image2 }}" class="img-post" alt="{{ post.alt }}">
+            <p>{{ post.description3 }}</p>
+            <p style="min-height:100px"></p>
             {% endif %}
             <ul class="list-inline item-details">
               {% if post.client %}

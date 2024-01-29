@@ -1,0 +1,56 @@
+---
+layout: default
+modal-id: 6
+img: ML.png
+alt: Machine Learning
+project-date: April 2014
+category: Machine Learning
+
+title1: Reinforcement Learning with Tetris
+description1: </p>
+        <div class="cv-section">
+        <p>Fraser plays Tetris is a reinforcement learning project based on python libraries PyGame and PyTorch. The algorithm is based on a project by patrickloeber on GitHub which revolved around the classic game Snake. I modified the code to work for Tetris, here are some of my findings.</p>
+        <p><a href="https://github.com/patrickloeber/python-fun" target="_blank">Source Python repository.</a></p>
+        <p style="min-height:50px"></p>
+        <h3>State</h3> 
+        <p style="min-height:10px"></p>
+        <p>Probably one of the most important choices in a reinforcement learning project is to choose the state. I tested several input states with different dimentions
+        </p>
+        <ol>
+                <li>Full information - my first approach was to give the algorithm as much information as possible. For this I imputed values for each square on the board as a binary that indicated whether the square was occupied or not. I also imputed the position of the block that falling Tetris block. This approach did not achieve high scores, likely due to a small model or small training times. It also doesn’t scale well as the size of the board is increased.</li>
+                <li>Plane information - in order to simplify the input state, I decided to provide information about the highest plane in the placed blocks and the lowest plane in the controlled block. The aim is for the algorithm to recognize complementary patters between the two to figure out good fits. The approach scales linearly with the x dimension of the board.</li>
+                <li>Local information - for this approach, the distance between each point in the shape to the bottom floor is calculated, then the number of points with the same distance is passed on to the state along-side the shortest distance. The two values are calculated for each possible move. This approach was so far the most successful, reaching an average of 2 cleared rows per game with a record of 14 rows. The limitation is that the agent only has knowledge of the local space and cannot plan more than one move ahead. The method however is independent of board size.</li>
+                <li>Minimal information - this approach is a minimization on the previous method. It performs the same calculations, but the state consist of 4 values, one for each possible action. The values indicate the difference in the number of points with the same distance between the current state and the new state from a possible action.</li>
+        </ol>
+        <img src="img/portfolio/TetrisState.png" class="img-post" alt="{{ post.alt }}">
+        <p style="min-height:50px"></p>
+
+        <h3>State</h3> 
+        <p style="min-height:10px"></p>
+        <p>The different states were evaluated by looking at the average score after the learning process has concluded. The average score is affected by model parameters, for example
+        </p>
+         <ul>
+                <li>Learning rate - this is a metric that represents the size of steps the algorithm takes when exploring the space. A small learning rate risks getting stuck in local minima, a large one risks being unstable.</li>
+                <li>gamma - this value is specific to reinforcement learning and indicates how much the model prioritises long term strategy. It must be between 0 and 1 and closer to 1 the more long-term strategy is prioritized. In the case of Tetris long term strategy is favourable but the average score peaked for gamma of 0.9.</li>
+                <li>exploration vs exploitation - when first training an algorithm it is important for it to explore the state space randomly (exploration), this is to avoid it getting stuck in local minima. As the algorithm learns the model becomes more reliable to use and can be called to make more decisions (exploitation). Results showed that increasing the exploration step was beneficial to increasing the final score.</li>
+        </ul>
+        <img src="img/portfolio/gamma_lr_plot.png" class="img-post" alt="{{ post.alt }}" width=400 height=auto>
+        <p style="min-height:50px"></p>
+        </div>
+        
+title2: Recognizing musical genre
+
+description2: </p>
+        <div class="cv-section">
+        <p>As a longterm music fan I have always been interested in what makes a song a specific genre. As I was studying the application of ML (Machine Learning) on audio signals for my work, I decided to use some of the methods I had learned in a side project. My final aim is to understand whether it is possible for a machine to descern a user's taste using ML.</p>
+
+        <p>I decided to begin with genre prediction and found an open dataset with 400 songs from 4 different genres which I used as my dataset and chose TensorFlow as my ML library. I initially attempted to feed waveform data directly into the algorithm. However, I encountered significant challenges due to slow performance and limitations in computational resources. Despite several attempts to optimize the algorithm, the computing power of my laptop proved insufficient to handle the complexity of the waveform data, hindering the training process.</p>
+
+        <p>I decided to take a different approach, and my research into the subject brought me to MFCC (Mel-Frequency Cepstral Coefficients) analysis, a technique widely utilized in voice recognition and related tasks. Thanks to this change I was able to overcome my performanxe issues and the training process sped up significantly. I then proceeded to optimize my algorithm by carefully selecting parameters such as model layers, layer depth and learning rate. My final algorithm achieved a validation accuracy of 90% and ROI of 0.78. </p>
+
+        <p>For future implementations of this algorithm I want to combine the two approaches. I will segment the original waveform in fractions that I will then use for the MFCC analysis, providing a change in frequencies over time.</p>
+
+        <p><a href="https://github.com/matildaperuzzo" target="_blank">Github repository.</a></p>
+
+        </div>
+---

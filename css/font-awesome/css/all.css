@@ -6364,6 +6364,36 @@ readers do not read off random characters that represent icons */
   font-display: block;
   src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype"); }
 
+@font-face {
+  font-family: 'MontserratThin';
+  font-style: normal;
+  font-weight: 50;
+  font-display: block;
+  src: url("css/font-awesome/webfonts/Montserrat-Thin.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'MontserratLight';
+  font-style: normal;
+  font-weight: 50;
+  font-display: block;
+  src: url("../webfonts/Montserrat-Light.ttf") format("truetype"); }
+
+
+@font-face {
+  font-family: "MontserratBold";
+  font-style: normal;
+  font-weight: bold;
+  font-display: block;
+  src: url("../webfonts/Montserrat-Bold.ttf");
+}
+
+.montserrat-mont {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
 .fab,
 .fa-brands {
   font-family: 'Font Awesome 6 Brands';

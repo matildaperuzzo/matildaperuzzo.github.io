@@ -32,8 +32,8 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family:"Montserrat", sans-serif;
+    font-weight: 200;
 }
 
 hr.star-light,
@@ -49,22 +49,26 @@ hr.star-primary {
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
+    
     display: inline-block;
     position: relative;
     top: -.8em;
     padding: 0 .25em;
-    font-family: FontAwesome;
+    font-family: "Montserrat", sans-serif;
     font-size: 2em;
 }
 
 hr.star-light {
-    border-color: #fff;
+    border-color: #2b0902;
 }
 
 hr.star-light:after {
     color: #fff;
-    background-color: #{{ site.color.primary }};
+    background-color: #{{ site.color.secondary }};
+}
+
+hr.star-light-about {
+    border-color: #fff;
 }
 
 hr.star-primary {
@@ -80,15 +84,26 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
+.img-post {
+    /* margin: 0 auto; */
+    max-height: 100%;
+    width: auto;
+}
+
 header {
     text-align: center;
-    color: #fff;
+    color: #2b0902;
     background: #{{ site.color.primary }};
+    
+    background-image: url(img/flakesAv.png);
+    background-size: cover;
+    background-position: center;
 }
 
 header .container {
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 50px;    
+
 }
 
 header img {
@@ -97,11 +112,17 @@ header img {
 }
 
 header .intro-text .name {
-    display: block;
+    /* display: block; */
+    /* text-transform: uppercase; */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 50;
+}
+
+header .intro-text .boldname {
+    /* display: block; */
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
-    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 }
 
 header .intro-text .skills {
@@ -116,6 +137,10 @@ header .intro-text .skills {
     }
 
     header .intro-text .name {
+        font-size: 4.75em;
+    }
+
+    header .intro-text .boldname {
         font-size: 4.75em;
     }
 
@@ -150,8 +175,8 @@ header .intro-text .skills {
 
 .navbar {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
 }
 
 .navbar a:focus {
@@ -197,7 +222,7 @@ section.success {
 
 #portfolio .portfolio-item {
     right: 0;
-    margin: 0 0 15px;
+    margin: 0 0 0;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -481,4 +506,34 @@ footer .footer-below {
 .modal.fade.in {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+}
+
+.cv-section {
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cv-container{
+    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cv-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center; /* Center the titles */
+    font-family: "Montserrat", sans-serif;
+}
+
+.cv-subtitle {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cv-section p {
+    text-align: center; /* Align paragraph contents to the left */
+    font-family: "Montserrat", sans-serif;
 }

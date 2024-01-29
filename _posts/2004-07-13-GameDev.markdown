@@ -1,0 +1,40 @@
+---
+layout: default
+modal-id: 2
+img: GameDev.png
+alt: Game Development
+project-date: April 2014
+category: Game Development
+
+title1: Mycelium
+
+description1: </p>
+        <video width="640" height="360" controls><source src="img/portfolio/MyceliumDemo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+        <div class="cv-section">
+            <p>Mycelium is a cozy puzzle game that asks you to play as the Mycelium Network connecting all trees within the forest. The aim of the game is to connect all trees using the least amount of resources as possible.
+            </p>
+            <p style="min-height:50px"></p>
+            <h3>Connections</h3> 
+            <p style="min-height:10px"></p>
+            <img src="img/portfolio/Connections.png" class="img-post" alt="{{ post.alt }}">
+            <p>The connections are procedurally generated to branch out randomly every time. The code to genrate the connections was first written in python and then transferred to GDscript. It connects 2 points with many small segments all with a small random rotation. Once the connection has reached it's destination the trees are considered to be connected and the connection starts branching out, this occurs with passes where the in each pass the segrments from the previous passes branch out into new segments. Segment size, angle, and branching factor are randomly chosen for each connection.
+            </p>
+
+            <p style="min-height:50px"></p>
+            <h3>Level design</h3> 
+            <p style="min-height:10px"></p>
+            <img src="img/portfolio/LevelDesign.png" class="img-post" alt="{{ post.alt }}">
+            <p>The level is designed to be a slightly modified travelling salesmen problem, i.e. quickest path that connects all points with some paths being blocked by rocks. In later levels there will be two types of tree object, regular tree and resource tree. The resource trees will allow to increase the amount of resource in order to allow for more connections. In the image these are indicated by the trunks.
+            </p>
+            <p style="min-height:50px"></p>
+            <h3>Assets</h3> 
+            <p style="min-height:10px"></p>
+            <p>Tree asset art taken from <a href="https://chuckcg.gumroad.com/">Chuck CG</a>.</p>
+            <p>Forest sounds from <a href="https://mixkit.co/">Mixkit</a>.</p>
+            <p>Sound effects by Jordan Payne.</p>
+            <p>GDscript code found in <a href="https://github.com/matildaperuzzo/Mycelium">GitHub repository</a>.</p>
+
+        </div>
+---
