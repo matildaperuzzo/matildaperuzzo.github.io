@@ -3,8 +3,6 @@ layout: default
 modal-id: 6
 img: ML.png
 alt: Machine Learning
-project-date: April 2014
-category: Machine Learning
 
 title1: Reinforcement Learning with Tetris
 description1: </p>

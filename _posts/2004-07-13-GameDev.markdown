@@ -3,8 +3,6 @@ layout: default
 modal-id: 2
 img: GameDev.png
 alt: Game Development
-project-date: April 2014
-category: Game Development
 
 title1: Mycelium
 

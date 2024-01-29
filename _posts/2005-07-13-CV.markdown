@@ -3,11 +3,9 @@ layout: default
 modal-id: 4
 img: CV.png
 alt: CV
-project-date: April 2014
-category: CV
+
 
 title1: Curriculum Vitae
-image1: hamiltonian.png
 description1: </p>
     <div class="cv-container">
         <div class="cv-section">

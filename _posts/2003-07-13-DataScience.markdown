@@ -3,8 +3,6 @@ layout: default
 modal-id: 3
 img: DataScience.png
 alt: Data sciences
-project-date: April 2014
-category: Data Science
 
 title1: Hamiltonian optimization
 image1: hamiltonian.png

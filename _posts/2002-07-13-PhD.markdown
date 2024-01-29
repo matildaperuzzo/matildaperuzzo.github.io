@@ -3,8 +3,7 @@ layout: default
 modal-id: 1
 img: PhD.png
 alt: PhD
-project-date: April 2014
-category: PhD
+
 
 title1: PhD project
 image1: PhDsection.png

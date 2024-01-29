@@ -2,9 +2,7 @@
 layout: default
 modal-id: 5
 img: Art.png
-alt: Data sciences
-project-date: April 2014
-category: Data Science
+alt: Art
 
 title1: Disaster chemistry
 image1: DC.png
