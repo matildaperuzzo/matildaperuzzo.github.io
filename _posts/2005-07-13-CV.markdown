@@ -11,7 +11,7 @@ description1: </p>
         <div class="cv-section">
             <p style="min-height:10px"></p>
             <h3>Skills</h3>
-            <p><span class="cv-title">Programming:</span> 8 years experience in Python, experience with large collaborative projects, Github repository management, common IDEs (VSCode, Pycharm, Spyder) and UI development. Foundational knowledge in C# and JavaScript and gaming engines. Eagerness to learn C++ and Unreal.</p>
+            <p><span class="cv-title">Programming:</span> 8 years experience in Python including Machine Learning libraries (PyTorch, TensorFlow) for classification and reinforcement learning, experience with large collaborative projects, Github repository management and UI development. Foundational knowledge in C#, JavaScript and gaming engines.</p>
             <p><span class="cv-title">Research and Development:</span> including automating and optimizing experiments, hypothesis testing, extracting insights from large datasets.</p>
             <p><span class="cv-title">Interpersonal skills:</span> troubleshooting problems, presenting complex concepts for variety of audiences, working in interdisciplinary teams, working on several projects simultaneously.</p>
         </div>
